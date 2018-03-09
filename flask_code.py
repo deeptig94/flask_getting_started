@@ -19,7 +19,7 @@ def name():
 def hello_there():
 
     hello_message = {
-        "message": "Hello there, {0}".format(name)
+        "message": "Hello there, {}".format(name)
     }
 
     return jsonify(hello_message)
