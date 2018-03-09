@@ -1,5 +1,4 @@
 from flask import Flask, jsonify
-import math
 
 app = Flask(__name__)
 
@@ -20,7 +19,7 @@ def name():
 def hello_there():
 
     hello_message = {
-        "message": "Hello there, {}".format(name)
+        "message": "Hello there, {0}".format(name)
     }
 
     return jsonify(hello_message)
@@ -36,7 +35,7 @@ def find_distance():
     y = (a[1] - b[1]) ** 2
 
     distance = {
-        "distance": math.sqrt(x+y),
+        "distance": (x+y) ** 0.5,
         "point a": a,
         "point b": b
                 }
