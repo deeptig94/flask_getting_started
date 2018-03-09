@@ -15,7 +15,7 @@ def name():
     return jsonify(data)
 
 
-@app.route("/hello/name", methods=['GET'])
+@app.route("/hello", methods=['GET'])
 def hello_there():
     hello_message = {
         "message": "Hello there, {}".format(name)
